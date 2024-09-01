@@ -43,6 +43,10 @@ th {
   text-transform: capitalize;
 }
 
+.card-view {
+  margin-top: 10px;
+}
+
 [appEditableContent] {
   outline: none;
 }
