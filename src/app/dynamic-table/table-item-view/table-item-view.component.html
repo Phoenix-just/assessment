@@ -5,7 +5,7 @@
       <div class="card">
         <div class="card-body">
           @for (item of Object.keys(itemDetails); track $index) {
-          <div class="col-md-4">
+          <div class="col-md-12">
             <h5 class="card-title">{{item | titlecase}}</h5>
             <p class="card-text" [innerHTML]="itemDetails[item] | sanitizeHtml"></p>
           </div>
