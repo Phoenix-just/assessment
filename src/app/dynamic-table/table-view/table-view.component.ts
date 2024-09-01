@@ -14,7 +14,6 @@ import { NgTemplateOutlet } from '@angular/common';
   styleUrl: './table-view.component.css'
 })
 export class TableViewComponent implements OnInit {
-  value: string = 'dsafasd';
   spinner: boolean = false;
   dataList: Array<any> = [];
   tableHeaders: Array<any> = [];
