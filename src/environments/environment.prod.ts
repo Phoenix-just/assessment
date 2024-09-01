@@ -1,3 +1,3 @@
-export const ENV = {
-    enviroment: 'production'
+export const enviroment = {
+    type: 'production'
 };
