@@ -1,7 +1,6 @@
 @if (spinner == true) {
 <div class="center-cotainer">
-  <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
-  </div>
+  <div class="spinner-border" role="status" style="width: 3rem; height: 3rem"></div>
 </div>
 } @else if (!dataList.length){
 <ng-container [ngTemplateOutlet]="emptyState"></ng-container>
@@ -14,18 +13,18 @@
   <div class="table-filters">
     <div class="search-bar">
       <span class="search-icon"><i class="fa-icon icon-search"></i></span>
-      <input class="search-input" [(ngModel)]="filterQuery" type="text" placeholder="Search">
+      <input class="search-input" [(ngModel)]="filterQuery" type="text" placeholder="Search" />
     </div>
   </div>
 </div>
 
 @if ((dataList | tableFilter: filterQuery).length) {
 <div class="table-responsive-md">
-  <table class="table table-hover table-bordered" width="{{tableWidth}}px">
+  <table class="table table-hover table-bordered" width="{{ tableWidth }}px">
     <thead class="table-dark thead-dark">
       <tr>
         @for (column of tableHeaders; track $index) {
-        <th>{{column}}</th>
+        <th>{{ column }}</th>
         }
         <th width="150px"></th>
       </tr>
@@ -34,10 +33,11 @@
       @for (row of dataList | tableFilter: filterQuery; track $index) {
       <tr>
         @for (column of tableHeaders; track $index) {
-        <td appEditableContent [(ngModel)]="row[column]">
-        </td>
+        <td appEditableContent [(ngModel)]="row[column]"></td>
         }
-        <td><a class="btn btn-primary" role="button" (click)="onViewDetails(row)">View Details</a></td>
+        <td>
+          <a class="btn btn-primary" role="button" (click)="onViewDetails(row)">View Details</a>
+        </td>
       </tr>
       }
     </tbody>
@@ -45,8 +45,7 @@
 </div>
 } @else {
 <ng-container [ngTemplateOutlet]="emptyState"></ng-container>
-}
-}
+} }
 
 <ng-template #emptyState>
   <div class="center-cotainer">
