@@ -1,0 +1,42 @@
+@if (spinner == true) {
+<div class="center-cotainer">
+  <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
+  </div>
+</div>
+} @else if (!dataList.length){
+<div class="center-cotainer">
+  <h1>No Data Found</h1>
+</div>
+} @else if (currentViewItem) {
+<app-table-item-view [headers]="tableHeaders" [itemDetails]="currentViewItem" (onBack)="eventFromView($event)" />
+} @else {
+
+<div class="table-header">
+  <div class="table-title">Table View</div>
+</div>
+<div class="table-body">
+  <div class="table-responsive-md">
+    <table class="table table-hover table-bordered" width="{{tableWidth}}px">
+      <thead class="table-dark thead-dark">
+        <tr>
+          @for (column of tableHeaders; track $index) {
+          <th>{{column}}</th>
+          }
+          <th width="150px"></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of dataList; track $index) {
+        <tr>
+          @for (column of tableHeaders; track $index) {
+          <td appEditableContent [(ngModel)]="row[column]">
+          </td>
+          }
+          <td><a class="btn btn-primary" role="button" (click)="onViewDetails(row)">View Details</a></td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+}

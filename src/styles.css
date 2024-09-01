@@ -1,0 +1,49 @@
+body {
+  background-color: #F9F9FB;
+  font-family: 'Poppins', sans-serif;  
+}
+
+.page-container {
+  padding: 73px 60px;
+  height: 100%;
+}
+
+.center-cotainer {
+  padding: 75px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+  align-content: center;
+}
+
+
+table {
+  width: 100%;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+}
+
+th {  
+  text-transform: capitalize;
+}
+
+[appEditableContent] {
+  outline: none;
+}
+

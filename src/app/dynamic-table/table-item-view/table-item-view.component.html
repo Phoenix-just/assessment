@@ -1,0 +1,16 @@
+<a class="btn btn-secondary" role="button" (click)="onNavBack()">&lt; Go Back</a>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        @for (item of Object.keys(itemDetails); track $index) {
+          <div class="col-md-4">
+            <h5 class="card-title">{{item | titlecase}}</h5>
+            <p class="card-text" [innerHTML]="itemDetails[item] | sanitizeHtml"></p>
+          </div>
+          <hr>
+        }
+      </div>
+    </div>
+  </div>
+</div>
