@@ -5,7 +5,7 @@
 } @else if (!dataList.length){
 <ng-container [ngTemplateOutlet]="emptyState"></ng-container>
 } @else if (currentViewItem) {
-<app-table-item-view [headers]="tableHeaders" [itemDetails]="currentViewItem" (onBack)="eventFromView($event)" />
+<app-table-item-view [itemDetails]="currentViewItem" (onBack)="eventFromView($event)" />
 } @else {
 
 <div class="table-header">

@@ -11,7 +11,6 @@ import { SanitizeHtml } from '../../shared/sanitize-html.pipe';
 })
 export class TableItemViewComponent {
   @Input() itemDetails: any;
-  @Input() headers!: Array<any>;
   @Output() onBack: EventEmitter<boolean> = new EventEmitter<boolean>();
   Object = Object;
 
