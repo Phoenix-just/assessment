@@ -29,6 +29,45 @@ body {
   align-content: center;
 }
 
+.table-filters {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.search-bar {
+  padding: 10px 12px;
+  border-bottom: 1px solid #E3E3E3;
+  align-content: center;
+}
+
+.fa-icon {
+  color: #848484;
+  height: 12px;
+  width: 12px;
+}
+
+.search-icon {
+  margin: 0;
+  display: inline;
+  padding: 4px;
+  margin-inline-end: 1px;
+  align-items: center;
+}
+
+.search-input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-weight: 400;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.search-input::placeholder {
+  color: #BABABA;
+}
+
 
 table {
   width: 100%;

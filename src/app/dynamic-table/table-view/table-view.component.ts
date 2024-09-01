@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { EditableContentDirective } from '../../shared/editable-content.directive';
-import { SanitizeHtml } from '../../shared/sanitize-html.pipe';
 import { TableViewService } from './table-view.service';
-import { RouterModule } from '@angular/router';
 import { TableItemViewComponent } from '../table-item-view/table-item-view.component';
+import { TableFilter } from '../../shared/table-filter.pipe';
+import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-table-view',
   standalone: true,
-  imports: [FormsModule, RouterModule, EditableContentDirective, TableItemViewComponent],
+  imports: [FormsModule, EditableContentDirective, TableItemViewComponent, TableFilter, NgTemplateOutlet],
   templateUrl: './table-view.component.html',
   styleUrl: './table-view.component.css'
 })
@@ -20,6 +20,7 @@ export class TableViewComponent implements OnInit {
   tableHeaders: Array<any> = [];
   tableWidth: number = 0;
   currentViewItem: any = null;
+  filterQuery: string = '';
 
 
   constructor(private tableViewService: TableViewService) { }
