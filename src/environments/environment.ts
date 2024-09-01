@@ -1,3 +1,3 @@
 export const enviroment = {
-    type: 'development'
+    production: false
 };

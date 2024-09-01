@@ -5,7 +5,7 @@ import { enviroment } from './environments/environment';
 
 bootstrapApplication(AppComponent, appConfig)
   .then(() => {
-    if (enviroment.type == 'production') {
+    if (enviroment.production) {
       console.log = () => {}
     }
   })
